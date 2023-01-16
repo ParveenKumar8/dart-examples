@@ -1,3 +1,4 @@
+/// Check whether iterable consist duplicates or not
 void main(List<String> args) {
   final ex = [2, 3, 5];
   print(ex.containsDuplicates);
