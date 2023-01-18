@@ -1,17 +1,19 @@
 void main(List<String> arguments) {
-  final type1 = eitherIntorDouble(TypeToReturn.integer);
+  final int type1 = eitherIntorDouble();
   print(type1);
-  final type2 = eitherIntorDouble(TypeToReturn.double);
+  final double type2 = eitherIntorDouble();
   print(type2);
 }
 
-enum TypeToReturn { integer, double }
+enum TypeToReturn { type1, type2 }
 
-T eitherIntorDouble<T extends num>(TypeToReturn typeToReturn) {
-  switch (typeToReturn) {
-    case TypeToReturn.integer:
+T eitherIntorDouble<T extends num>() {
+  switch (T) {
+    case int:
       return 5 as T;
-    case TypeToReturn.double:
+    case double:
       return 5.5 as T;
+    default:
+      throw Exception('Not Supported data Type');
   }
 }
