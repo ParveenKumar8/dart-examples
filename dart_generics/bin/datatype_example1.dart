@@ -3,6 +3,8 @@ void main(List<String> arguments) {
   print(type1);
   final double type2 = eitherIntorDouble();
   print(type2);
+  // final String type3 = eitherIntorDouble();
+  // print(type3);
 }
 
 enum TypeToReturn { type1, type2 }
