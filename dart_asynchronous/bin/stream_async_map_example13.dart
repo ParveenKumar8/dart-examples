@@ -4,7 +4,9 @@ void main(List<String> args) async {
     (name) => getCharactersFromName(name),
   )
       .fold('', (previous, element) {
+    //print("****$previous");
     final elements = element.join(' ');
+    //print(" ----- " + elements);
     return '$previous $elements ';
   });
   print(result);
