@@ -4,6 +4,8 @@ import 'dart:io';
 import 'dart:convert';
 
 // before running this program. Please change setting in launch.json file.
+// Also multiple isolates(Threads) create when we call getMessage(). This issue fixed in example3
+// where we alive the single thread to communicate in a program.
 void main(List<String> args) async {
   do {
     stdout.writeln("Say Something: ");
